@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KNOVELTI - Explore Learning</title>
+  <link rel="icon" type="image/png" href="weblogo.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+  <style>
+    .bg-hero {
+      background-image: url(Background.png);
+      background-size: cover;
+      background-position: center;
+      background-attachment: scroll; /* mobile friendly */
+    }
+    .hero-fade {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(46,120,121,0.8) 70%, #2f7879 100%);
+      z-index: 1;
+    }
+    .bg-gradient-fade {
+      background: linear-gradient(to bottom, transparent 0%, #2f7879 100%);
+    }
+    .bg-gradient-fade-top {
+      background: linear-gradient(to top, transparent 0%, #2f7879 100%);
+    }
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2rem !important;
+        line-height: 2.5rem !important;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+      }
+      .hero-p {
+        font-size: 1rem !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+      }
+      .mobile-stack {
+        flex-direction: column !important;
+        gap: 2rem !important;
+      }
+      .mobile-image {
+        margin-top: 1rem !important;
+      }
+      .hero-section-content {
+        padding-top: 6rem !important;
+        padding-bottom: 2rem !important;
+      }
+      .mobile-header-img {
+        width: 3rem !important;
+        height: 3rem !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Mobile Navbar Toggle -->
+  <header class="md:hidden fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-90 px-4 flex items-center justify-between">
+    <div class="flex items-center space-x-2">
+      <img src="Logo.PNG" alt="KNOVELTI Logo" class="mobile-header-img w-12 h-12 object-cover"/>
+      <div class="text-xl font-bold text-white"><span class="font-normal" style="font-family: 'Cinzel', serif;">KNOVELTI</span></div>
+    </div>
+    <button id="menu-btn" class="text-white text-2xl p-2">&#9776;</button>
+  </header>
+  <nav id="mobile-menu" class="md:hidden hidden fixed top-16 left-0 right-0 bg-black bg-opacity-95 text-white z-50">
+    <ul class="py-4">
+      <li><a href="index.html" class="block px-6 py-3 hover:bg-gray-800">Home</a></li>
+      <li><a href="team.html" class="block px-6 py-3 hover:bg-gray-800">Team</a></li>
+      <li><a href="explore.html" class="block px-6 py-3 hover:bg-gray-800">Product</a></li>
+      <li><a href="about.html" class="block px-6 py-3 hover:bg-gray-800">About Us</a></li>
+      <li><a href="contact.html" class="block px-6 py-3 hover:bg-gray-800">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-screen text-white overflow-hidden bg-hero hero-section-content pb-10 md:pb-10">
+    <!-- Gradient Overlay for fade effect -->
+    <div class="hero-fade"></div>
+
+    <!-- Desktop Navbar -->
+    <div class="relative z-50">
+      <div class="absolute left-0 right-0 top-0 h-24 bg-gradient-fade-top pointer-events-none"></div>
+      <nav id="navbar" class="hidden md:flex w-full justify-between items-center mb-12 transition-all duration-500 px-6 py-2 absolute top-0 left-0 right-0" style="background-color: transparent;">
+        <div class="flex items-center space-x-4 ml-28">
+          <a href="index.html">
+            <img src="Logo.PNG" alt="KNOVELTI Logo" class="w-16 h-16 object-cover" />
+          </a>
+          <a href="index.html">
+            <div class="text-4xl font-extrabold tracking-wide -ml-4" style="color: #e8d6b6;"><span class="font-normal" style="font-family: 'Cinzel', serif;">KNOVELTI</span></div>
+          </a>
+        </div>
+        <ul class="space-x-10 text-lg uppercase font-bold tracking-wide flex mr-28">
+          <li><a href="index.html" class="transition duration-300" style="color: #e8d6b6;" onmouseover="this.style.color='#83a291';" onmouseout="this.style.color='#e8d6b6';">Home</a></li>
+          <li><a href="team.html" class="transition duration-300" style="color: #e8d6b6;" onmouseover="this.style.color='#83a291';" onmouseout="this.style.color='#e8d6b6';">Team</a></li>
+          <li><a href="product.html" class="transition duration-300" style="color: #e8d6b6;" onmouseover="this.style.color='#83a291';" onmouseout="this.style.color='#e8d6b6';">Product</a></li>
+          <li><a href="about.html" class="transition duration-300" style="color: #e8d6b6;" onmouseover="this.style.color='#83a291';" onmouseout="this.style.color='#e8d6b6';">About Us</a></li>
+          <li><a href="contact.html" class="transition duration-300" style="color: #e8d6b6;" onmouseover="this.style.color='#83a291';" onmouseout="this.style.color='#e8d6b6';">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 md:px-6 py-8 flex justify-center">
+      <div class="mt-8 md:mt-24 w-full fade-in">
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-4 text-center"><span class="font-normal" style="font-family: 'Cinzel', serif; color: #e8d6b6;">KNOVELTI</span></h1>
+        <p class="mb-6 text-base md:text-xl text-center mx-0 md:mx-40">
+          Your go-to lifestyle shop blending education and entertainment through party games and practical products for 
+          every barkada and classroom. Whether you're a student, a party host, or just love unique Filipino-made finds,
+          Every pack we deliver is designed to Inspire curiosity, Build friendships, Empower through fun learning, 
+          And of course, leave a lasting impact! Our first-ever pharmacy-themed tabletop/party game launches on 6.30.25 — 
+          a first in the Philippines! ✨
+        </p>
+      </div>
+    </div>
+
+    <!-- Hero Content and Image Side by Side -->
+    <div class="relative z-10 max-w-7xl mx-auto px-4 md:px-6 py-10">
+      <div class="flex flex-col md:flex-row items-center md:justify-between gap-8 mobile-stack">
+        <!-- Hero Content -->
+        <div class="md:max-w-xl fade-in md:mb-0">
+          <h1 class="text-3xl md:text-6xl font-extrabold mb-4 leading-tight">
+            WHY <span class="font-normal" style="font-family: 'Cinzel', serif; color: #e8d6b6;">KNOVELTI?</span>
+          </h1>
+          <p class="mb-6 text-base md:text-lg">
+            Because Every Product Should Spark Curiosity. Knovelti is a blend of “𝐊𝐧𝐨𝐰” and “𝐍𝐨𝐯𝐞𝐥𝐭𝐲”
+            Know - to become aware, to discover truth.
+            Novelty - something new, unique, or unexpected.
+            At Knovelti, we create products that open minds. Whether it's a clever card game, a quirky collectible, 
+            or a mind-bending design, everything we make is designed to make people say:
+            "I didn't know I needed this... but now I do."
+          </p>
+        </div>
+
+        <div class="mt-8 md:mt-12 bg-white rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 p-3 fade-in w-full md:w-96 mobile-image">
+          <img src="origin.jpg" alt="Game 1" class="rounded w-full object-cover h-full">
+        </div>
+      </div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 md:px-6 py-0">
+      <div class="flex flex-col md:flex-row-reverse items-center md:justify-between gap-8 mobile-stack">
+        <!-- Hero Content -->
+        <div class="md:max-w-xl fade-in md:mb-0">
+          <h1 class="text-3xl md:text-6xl font-extrabold mb-4 leading-tight">
+            VISION AND MISSION
+          </h1>
+          <p class="mb-6 text-base md:text-lg">
+            At KNOVELTI, our mission is to turn learning into an exciting, everyday adventure.
+            We create innovative, collectible, and curiosity-driven products that blend education with entertainment.
+            Whether you're a student, educator, or hobbyist,
+            We're here to empower you with practical tools that spark imagination, 
+            build knowledge, and inspire lifelong learning.
+          </p>
+        </div>
+
+        <div class="mt-8 md:mt-12 bg-white rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 p-3 fade-in w-full md:w-96 mobile-image">
+          <img src="vm.jpg" alt="Game 1" class="rounded w-full object-cover h-full">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white text-center py-6">
+    <p>&copy; 2025 KNOVELTI. All rights reserved.</p>
+  </footer>
+
+  <!-- JS for Animations & Menu -->
+  <script>
+    // IntersectionObserver animations
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
+    };
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('opacity-100', 'translate-y-0');
+        entry.target.classList.remove('opacity-0', 'translate-y-6');
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+    faders.forEach(fader => {
+      fader.classList.add('opacity-0', 'translate-y-6', 'transition', 'duration-1000');
+      appearOnScroll.observe(fader);
+    });
+
+    // Mobile nav toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Optional: Add scroll-based background fade for hero section
+    window.addEventListener('scroll', function() {
+      const fade = document.querySelector('.hero-fade');
+      const scrollY = window.scrollY;
+      // Adjust opacity for fade overlay based on scroll position
+      if (fade) {
+        let opacity = Math.min(scrollY / 400, 1);
+        fade.style.background = `linear-gradient(to bottom, rgba(0,0,0,${0.5 + opacity * 0.2}) 0%, rgba(46,120,121,${0.8 + opacity * 0.1}) 70%, #2f7879 100%)`;
+      }
+    });
+
+    // Close mobile menu on click outside
+    document.addEventListener('click', function(e) {
+      if (window.innerWidth < 768 && mobileMenu && !mobileMenu.classList.contains('hidden')) {
+        if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+          mobileMenu.classList.add('hidden');
+        }
+      }
+    });
+    // Hide mobile menu on resize to desktop
+    window.addEventListener('resize', function () {
+      if (window.innerWidth >= 768 && mobileMenu && !mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.add('hidden');
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KNOVELTI - Explore Learning</title>
+  <link rel="icon" type="image/png" href="weblogo.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+  <!-- Boxicons CDN for social media icons -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <style>
+    .bg-hero {
+      background-image: url(Background.png);
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    .hero-fade {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(46,120,121,0.8) 70%, #2f7879 100%);
+      z-index: 1;
+    }
+    .bg-gradient-fade {
+      background: linear-gradient(to bottom, transparent 0%, #2f7879 100%);
+    }
+    .bg-gradient-fade-top {
+      background: linear-gradient(to top, transparent 0%, #2f7879 100%);
+    }
+    .ul-icons {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+    .ul-icons li a {
+      font-size: 2rem;
+      color: #7c3aed;
+      transition: color 0.2s;
+    }
+    .ul-icons li a:hover {
+      color: #a78bfa;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Mobile Navbar Toggle -->
+  <header class="md:hidden flex justify-between items-center px-6 py-4 bg-black bg-opacity-60 text-white fixed top-0 left-0 right-0 z-50">
+    <img src="Logo.PNG" class="w-24 h-12 object-cover"/>
+    <div class="text-3xl font-bold"><span class="font-normal" style="font-family: 'Cinzel', serif;">KNOVELTI</span></div>
+    <button id="menu-btn" class="text-3xl">&#9776;</button>
+  </header>
+  
+  <!-- Mobile Menu -->
+  <nav id="mobile-menu" class="md:hidden hidden fixed top-16 left-0 right-0 bg-black bg-opacity-95 text-white z-50">
+    <ul class="py-4">
+      <li><a href="index.html" class="block px-6 py-3 hover:bg-gray-800">Home</a></li>
+      <li><a href="team.html" class="block px-6 py-3 hover:bg-gray-800">Team</a></li>
+      <li><a href="product.html" class="block px-6 py-3 hover:bg-gray-800">Product</a></li>
+      <li><a href="about.html" class="block px-6 py-3 hover:bg-gray-800">About Us</a></li>
+      <li><a href="contact.html" class="block px-6 py-3 hover:bg-gray-800">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-screen text-white overflow-hidden py-8 md:pt-0 bg-hero flex items-center justify-center">
+    <!-- Gradient Overlay for fade effect -->
+    <div class="hero-fade"></div>
+
+    <!-- NAVBAR with Top Fade Overlay  -->
+    <div class="absolute top-0 left-0 right-0 z-50">
+      <div class="absolute left-0 right-0 top-0 h-24 bg-gradient-fade-top pointer-events-none"></div>
+      <nav id="navbar" class="hidden md:flex w-full justify-between items-center transition-all duration-500 py-2 px-6 absolute top-0 left-0 right-0" style="background-color: transparent;">
+        <div class="flex items-center space-x-4 ml-28">
+          <a href="index.html">
+            <img src="Logo.PNG" alt="KNOVELTI Logo" class="w-16 h-16 object-cover" />
+          </a>
+          <a href="index.html">
+            <div class="text-4xl font-extrabold tracking-wide -ml-4" style="color: #e8d6b6;"><span class="font-normal" style="font-family: 'Cinzel', serif;">KNOVELTI</span></div>
+          </a>
+        </div>
+        <ul class="space-x-10 text-lg uppercase font-bold tracking-wide flex mr-28">
+          <li><a href="index.html" class="transition duration-300" style="color: #e8d6b6;" onmouseover="this.style.color='#83a291';" onmouseout="this.style.color='#e8d6b6';">Home</a></li>
+          <li><a href="team.html" class="transition duration-300" style="color: #e8d6b6;" onmouseover="this.style.color='#83a291';" onmouseout="this.style.color='#e8d6b6';">Team</a></li>
+          <li><a href="product.html" class="transition duration-300" style="color: #e8d6b6;" onmouseover="this.style.color='#83a291';" onmouseout="this.style.color='#e8d6b6';">Product</a></li>
+          <li><a href="about.html" class="transition duration-300" style="color: #e8d6b6;" onmouseover="this.style.color='#83a291';" onmouseout="this.style.color='#e8d6b6';">About Us</a></li>
+          <li><a href="contact.html" class="transition duration-300" style="color: #e8d6b6;" onmouseover="this.style.color='#83a291';" onmouseout="this.style.color='#e8d6b6';">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Contact Form Card -->
+    <div class="relative z-10 w-full max-w-xl mx-auto bg-gradient-to-br from-white via-gray-100 to-white bg-opacity-90 rounded-3xl p-10 shadow-2xl border border-purple-200 backdrop-blur-xl mt-16 md:mt-32">
+      <h1 class="text-4xl font-extrabold text-center mb-8" style="color: #2f7879;">Let's Connect</h1>
+      <form class="grid grid-cols-1 gap-6">
+        <div>
+          <label class="block text-sm font-semibold mb-1" style="color: #2f7879;">Full Name</label>
+          <input type="text" class="text-gray-800 w-full px-5 py-3 rounded-full border border-gray-300 shadow-inner focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="Knovelti" />
+        </div>
+        <div>
+          <label class="block text-sm font-semibold mb-1" style="color: #2f7879;">Email Address</label>
+          <input type="email" class="text-gray-800 w-full px-5 py-3 rounded-full border border-gray-300 shadow-inner focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="knovelti@example.com" />
+        </div>
+        <div>
+          <label class="block text-sm font-semibold mb-1" style="color: #2f7879;">Message</label>
+          <textarea class="text-gray-800 w-full px-5 py-3 rounded-xl border border-gray-300 shadow-inner focus:outline-none focus:ring-2 focus:ring-purple-500" rows="5" placeholder="Type your message here..."></textarea>
+        </div>
+        <div class="text-center">
+          <button
+            type="submit"
+            class="bg-[#2f7879] hover:bg-[#5e9394] text-white font-bold py-3 px-8 rounded-full transition duration-300 shadow-lg"
+          >
+            Send Message
+          </button>
+        </div>
+      </form>
+      <!-- Social Media Links -->
+      <div class="mt-12 text-center">
+        <h2 class="text-xl font-semibold mb-4 text-gray-700">Follow us on social media:</h2>
+        <div class="flex justify-center space-x-6">
+          <ul class="ul-icons flex gap-6 justify-center p-0 m-0 list-none">
+            <li>
+              <a href="https://www.facebook.com/profile.php?id=61569434732142" target="_blank">
+                <i class='bx bxl-facebook-circle text-[2rem] text-[#2f7879] hover:text-[#5e9394] transition-colors duration-200'></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/@knovelti?si=7QiBz0BWen5SglQ4" target="_blank">
+                <i class='bx bxl-youtube text-[2rem] text-[#2f7879] hover:text-[#5e9394] transition-colors duration-200'></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/knovelti_ph/" target="_blank">
+                <i class='bx bxl-instagram text-[2rem] text-[#2f7879] hover:text-[#5e9394] transition-colors duration-200'></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.tiktok.com/@knovelti_ph" target="_blank">
+                <i class='bx bxl-tiktok text-[2rem] text-[#2f7879] hover:text-[#5e9394] transition-colors duration-200'></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://x.com/knoveltiph" target="_blank">
+                <i class='bx bxl-twitter text-[2rem] text-[#2f7879] hover:text-[#5e9394] transition-colors duration-200'></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white text-center py-6">
+    <p>&copy; 2025 KNOVELTI. All rights reserved.</p>
+  </footer>
+
+  <!-- JS for Animations & Menu -->
+  <script>
+    // IntersectionObserver animations
+    const faders = document.querySelectorAll('.fade-in');
+    if (faders.length > 0) {
+      const appearOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
+      };
+      const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('opacity-100', 'translate-y-0');
+          entry.target.classList.remove('opacity-0', 'translate-y-6');
+          observer.unobserve(entry.target);
+        });
+      }, appearOptions);
+      faders.forEach(fader => {
+        fader.classList.add('opacity-0', 'translate-y-6', 'transition', 'duration-1000');
+        appearOnScroll.observe(fader);
+      });
+    }
+
+    // Mobile nav toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+
+    // Optional: Add scroll-based background fade for hero section
+    window.addEventListener('scroll', function() {
+      const hero = document.querySelector('.bg-hero');
+      const fade = document.querySelector('.hero-fade');
+      const scrollY = window.scrollY;
+      // Adjust opacity for fade overlay based on scroll position
+      if (fade) {
+        let opacity = Math.min(scrollY / 400, 1);
+        fade.style.background = `linear-gradient(to bottom, rgba(0,0,0,${0.5 + opacity * 0.2}) 0%, rgba(46,120,121,${0.8 + opacity * 0.1}) 70%, #2f7879 100%)`;
+      }
+    });
+  </script>
+
+</body>
+</html>
